@@ -1,25 +1,37 @@
-# FishNet: Fish Species Classification Using Deep Learning 🐟
+# FishNet – Fish Species Classification Using Deep Learning 🐟
 
 ## 📌 Project Overview
-FishNet is a lightweight deep learning-based image classification system designed to accurately identify fish species from images. The model enhances MobileNetV3Small with a custom lightweight self-attention mechanism and residual dense blocks to achieve high accuracy while remaining efficient for mobile and edge deployment.
+FishNet is a deep learning–based image classification project designed to accurately identify fish species from images.  
+The project enhances **MobileNetV3Small** with a **lightweight self-attention mechanism** and **residual dense blocks** to achieve high accuracy while remaining computationally efficient.
 
-## 🚀 Features
-- 31 fish species classification
-- Lightweight architecture (MobileNetV3 + Attention)
-- High accuracy with fewer parameters
-- Suitable for mobile and edge devices
+This project was developed and trained using **Google Colab** and is suitable for **real-time, mobile, and edge-device deployment**.
+
+---
 
 ## 🧠 Model Architecture
-- MobileNetV3Small backbone
-- Lightweight self-attention (GhostModule-inspired)
-- Residual Dense Block
-- Spatial Dropout + Global Average Pooling
+- **Backbone:** MobileNetV3Small (ImageNet pretrained)
+- **Enhancements:**
+  - Lightweight self-attention (GhostModule-inspired)
+  - Residual Dense Block
+  - Spatial Dropout
+- **Optimizer:** Adam with Cosine Decay Learning Rate
+- **Loss Function:** Categorical Cross-Entropy with Label Smoothing
 
-## 📊 Dataset
-- Total images: 13,321
-- Classes: 31 fish species
-- Source: Kaggle Fish Dataset  
-🔗 https://www.kaggle.com/datasets/markdaniellampa/fish-dataset
+---
+
+## 📊 Dataset Details
+- **Total Images:** 13,321
+- **Number of Classes:** 31 fish species
+- **Image Size:** 224 × 224
+- **Split:**
+  - Training: 67%
+  - Validation: 20%
+  - Testing: 13%
+
+🔗 Dataset Source:  
+https://www.kaggle.com/datasets/markdaniellampa/fish-dataset
+
+---
 
 ## 🛠 Tech Stack
 - Python
@@ -28,18 +40,26 @@ FishNet is a lightweight deep learning-based image classification system designe
 - OpenCV
 - Scikit-learn
 - Matplotlib, Seaborn
+- Google Colab
 
-## 📈 Results
-- Test Accuracy: **98.35%**
-- Macro F1-score: **0.98**
-- Outperformed ResNet50, InceptionV3, Xception
+---
 
-### Sample Outputs:
-- Accuracy & Loss Curves
+## 📈 Performance
+- **Test Accuracy:** 98.35%
+- **Macro F1-Score:** 0.98
+- **Top-2 Accuracy:** High consistency across all classes
+- Outperformed models such as **ResNet50**, **InceptionV3**, **Xception**, and **DenseNet121**
+
+---
+
+## 📂 Outputs & Visualizations
+The project generates:
+- Accuracy vs Epoch plot
+- Loss vs Epoch plot
 - Confusion Matrix
-- ROC Curves
-- Random Test Predictions
+- ROC Curves (multi-class)
+- Random test image predictions
+- Summary metrics (CSV)
 
-## 🏃 How to Run
-```bash
-pip install -r requirements.txt
+All outputs are saved during runtime for analysis.
+
